@@ -104,7 +104,7 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
         const date = getDate(ctx.cfg.configuration, file.data) ?? new Date()
         if (
           (opts?.includeEmptyFiles || (file.data.text && file.data.text !== "")) &&
-          (file.data.frontmatter?.tags?.includes("discoverable") !== true || file.data.frontmatter?.tags?.includes("top-level") !== true)
+          (file.data.frontmatter?.tags?.includes("discoverable") || file.data.frontmatter?.tags?.includes("top-level") || slug == "index")
         ) {
 
           linkIndex.set(slug, {
