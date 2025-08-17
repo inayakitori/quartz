@@ -29,7 +29,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.TagList(),
+    // Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
@@ -47,10 +47,14 @@ export const defaultContentPageLayout: PageLayout = {
     modifiedExplorer,
   ],
   right: [
-    Component.Graph({localGraph: {
+    Component.ConditionalRender({
+      component: Component.Graph({localGraph: {
       depth: 3,
       showTags: false,
     }}),
+      condition: (page) => !!page.fileData.frontmatter?.scopes?.includes("public")
+    })
+    ,
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],

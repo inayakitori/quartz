@@ -15,6 +15,7 @@ export type ContentDetails = {
   title: string
   links: SimpleSlug[]
   tags: string[]
+  scopes: string[]
   content: string
   richContent?: string
   date?: Date
@@ -101,10 +102,11 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
       const linkIndex: ContentIndexMap = new Map()
       for (const [tree, file] of content) {
         const slug = file.data.slug!
+        const scopes = file.data.frontmatter?.scopes
         const date = getDate(ctx.cfg.configuration, file.data) ?? new Date()
         if (
           (opts?.includeEmptyFiles || (file.data.text && file.data.text !== "")) &&
-          (file.data.frontmatter?.tags?.includes("discoverable") || file.data.frontmatter?.tags?.includes("top-level") || slug == "index")
+          (scopes?.some((scope) => scope.includes("public")) || slug == "index") // only index files in the public scope
         ) {
 
           linkIndex.set(slug, {
@@ -113,6 +115,7 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
             title: file.data.frontmatter?.title!,
             links: file.data.links ?? [],
             tags: file.data.frontmatter?.tags ?? [],
+            scopes: scopes ?? [],
             content: file.data.text ?? "",
             richContent: opts?.rssFullHtml
               ? escapeHTML(toHtml(tree as Root, { allowDangerousHtml: true }))

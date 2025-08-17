@@ -26,7 +26,10 @@ export default ((opts?: Partial<BacklinksOptions>) => {
     const slug = simplifySlug(fileData.slug!)
     const backlinkFiles = allFiles.filter((file) => 
       file.links?.includes(slug) && 
-      (file.frontmatter?.tags?.includes("discoverable")|| file.frontmatter?.tags?.includes("top-level"))
+      fileData.frontmatter?.scopes?.some((currentSource) => 
+        file.frontmatter?.scopes?.some((destinationScope) =>
+          currentSource.includes(destinationScope) 
+      ))
     );
     if (options.hideWhenEmpty && backlinkFiles.length == 0) {
       return null
