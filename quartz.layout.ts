@@ -47,7 +47,10 @@ export const defaultContentPageLayout: PageLayout = {
     modifiedExplorer,
   ],
   right: [
-    Component.Graph({localGraph: {depth: 3}}),
+    Component.Graph({localGraph: {
+      depth: 3,
+      showTags: false,
+    }}),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
