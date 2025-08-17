@@ -8,8 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/inayakitori",
+      Email: "mailto:inayakitorikhurram@gmail.com"
     },
   }),
 }
@@ -23,10 +23,6 @@ const modifiedExplorer = Component.Explorer({
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     // Component.TagList(),
@@ -49,9 +45,9 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.ConditionalRender({
       component: Component.Graph({localGraph: {
-      depth: 3,
-      showTags: false,
-    }}),
+        depth: 3,
+        showTags: false,
+      }}),
       condition: (page) => !!page.fileData.frontmatter?.scopes?.includes("public")
     })
     ,
