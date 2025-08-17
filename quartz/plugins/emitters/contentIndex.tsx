@@ -31,7 +31,7 @@ interface Options {
 }
 
 const defaultOptions: Options = {
-  enableSiteMap: true,
+  enableSiteMap: false,
   enableRSS: true,
   rssLimit: 10,
   rssFullHtml: false,
@@ -102,7 +102,11 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
       for (const [tree, file] of content) {
         const slug = file.data.slug!
         const date = getDate(ctx.cfg.configuration, file.data) ?? new Date()
-        if (opts?.includeEmptyFiles || (file.data.text && file.data.text !== "")) {
+        if (
+          (opts?.includeEmptyFiles || (file.data.text && file.data.text !== "")) &&
+          (file.data.frontmatter?.tags?.includes("discoverable") !== true || file.data.frontmatter?.tags?.includes("top-level") !== true)
+        ) {
+
           linkIndex.set(slug, {
             slug,
             filePath: file.data.relativePath!,

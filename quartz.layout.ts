@@ -14,6 +14,12 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
+const modifiedExplorer = Component.Explorer({
+      filterFn: (node) => {
+        return node.data?.tags.includes("top-level") !== false
+      }
+    });
+
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -38,10 +44,10 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    modifiedExplorer,
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({localGraph: {depth: 3}}),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -62,7 +68,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    modifiedExplorer,
   ],
   right: [],
 }
