@@ -229,7 +229,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                 // embed cases
                 if (value.startsWith("!")) {
                   const ext: string = path.extname(fp).toLowerCase()
-                  const url = slugifyFilePath(fp as FilePath)
+                  const url = slugifyFilePath(fp as FilePath, undefined, false)
                   if ([".png", ".jpg", ".jpeg", ".gif", ".bmp", ".svg", ".webp"].includes(ext)) {
                     const match = wikilinkImageEmbedRegex.exec(alias ?? "")
                     const alt = match?.groups?.alt ?? ""
