@@ -1,1 +1,4 @@
-Thu 02/07/2026 19:20:39.19: restarting: 
+Thu 02/07/2026 19:28:35.17: restarting: 
+
+[42m[30m Quartz v5.0.0 [39m[49m 
+
