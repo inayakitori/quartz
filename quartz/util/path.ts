@@ -69,7 +69,7 @@ function sluggify(s: string): string {
     .replace(/\/$/, "")
 }
 
-const hash = (str: string, seed = 31148) => {
+export const hash = (str: string, seed = 31148) => {
     let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
     for(let i = 0, ch; i < str.length; i++) {
         ch = str.charCodeAt(i);
@@ -101,10 +101,10 @@ export function slugifyFilePath(fp: FilePath, excludeExt?: boolean, appendHash: 
 
   let slug_hash = "" 
   if(slug != "index" && appendHash){
-    slug_hash = "-" + hash(slug).toString(16).slice(0, 8)
+    slug_hash = "-" + hash(slug).toString(36).slice(0, 6)
   }
 
-  console.log("[HASHING] " + slug + "  -->  " + slug + slug_hash)
+  //console.log("[HASHING] " + slug + "  -->  " + slug + slug_hash)
 
   return (slug + slug_hash + ext) as FullSlug
 }

@@ -3,6 +3,8 @@ import { QuartzPluginData } from "../plugins/vfile"
 import { Date, getDate } from "./Date"
 import { QuartzComponent, QuartzComponentProps } from "./types"
 import { GlobalConfiguration } from "../cfg"
+import { hashScope, PUBLIC } from "../plugins/emitters/scopePage"
+import ScopeContent from "./pages/ScopeContent"
 
 export type SortFn = (f1: QuartzPluginData, f2: QuartzPluginData) => number
 
@@ -57,18 +59,19 @@ type Props = {
   sort?: SortFn
 } & QuartzComponentProps
 
-export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort }: Props) => {
+export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort}: Props) => {
   const sorter = sort ?? byDateAndAlphabeticalFolderFirst(cfg)
   let list = allFiles.sort(sorter)
   if (limit) {
     list = list.slice(0, limit)
   }
 
-  return (
+  return ( // TODO change to include scopes and tags
     <ul class="section-ul">
       {list.map((page) => {
         const title = page.frontmatter?.title
         const tags = page.frontmatter?.tags ?? []
+        const scopes = page.frontmatter?.scopes ?? []
 
         return (
           <li class="section-li">
@@ -84,13 +87,13 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
                 </h3>
               </div>
               <ul class="tags">
-                {tags.map((tag) => (
+                {scopes.map((scope) => (
                   <li>
                     <a
                       class="internal tag-link"
-                      href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
+                      href={resolveRelative(fileData.slug!, `scopes/${hashScope(scope.split("/").at(-1) ?? PUBLIC)}` as FullSlug)}
                     >
-                      {tag}
+                      {scope}
                     </a>
                   </li>
                 ))}
