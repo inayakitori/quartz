@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Garden</title>
+      <link>https://garden.inayakitori.com</link>
+      <description>Last 10 notes on Garden</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Capstone Project</title>
+    <link>https://garden.inayakitori.com/Capstone-Project-24uvnn</link>
+    <guid>https://garden.inayakitori.com/Capstone-Project-24uvnn</guid>
+    <description><![CDATA[  Under Construction This page is still unfinished. ]]></description>
+    <pubDate>Sat, 30 Aug 2025 08:44:12 GMT</pubDate>
+  </item><item>
+    <title>Engineering terms</title>
+    <link>https://garden.inayakitori.com/Engineering-terms-2a5e9x</link>
+    <guid>https://garden.inayakitori.com/Engineering-terms-2a5e9x</guid>
+    <description><![CDATA[ Coupon A coupon is a small piece of material used for testing material properties Coupons will be put under tensile, compression, shear, bending, and other loads to test the material to get it’s strength, stiffness, and other aspects Example: Tensile bending coupon Tensile tests of the steel coupons... ]]></description>
+    <pubDate>Wed, 20 Aug 2025 07:42:03 GMT</pubDate>
+  </item><item>
+    <title>Abbreviations</title>
+    <link>https://garden.inayakitori.com/Abbreviations-qijq4t</link>
+    <guid>https://garden.inayakitori.com/Abbreviations-qijq4t</guid>
+    <description><![CDATA[ Defence Science and Technology Group . ]]></description>
+    <pubDate>Wed, 20 Aug 2025 05:58:57 GMT</pubDate>
+  </item><item>
+    <title>Hosting this Website</title>
+    <link>https://garden.inayakitori.com/Hosting-this-Website-yhj759</link>
+    <guid>https://garden.inayakitori.com/Hosting-this-Website-yhj759</guid>
+    <description><![CDATA[ Design Requirements There are a few moving parts to hosting this website, and multiple design requirements: The core content must be in markdown database format. ]]></description>
+    <pubDate>Mon, 18 Aug 2025 03:09:03 GMT</pubDate>
+  </item><item>
+    <title>Inaya</title>
+    <link>https://garden.inayakitori.com/Inaya-z1gqvk</link>
+    <guid>https://garden.inayakitori.com/Inaya-z1gqvk</guid>
+    <description><![CDATA[  Here’s some info about me. Socials Github: inayakitori Discord: @inayakitori . ]]></description>
+    <pubDate>Sun, 17 Aug 2025 16:44:57 GMT</pubDate>
+  </item><item>
+    <title>Welcome to Quartz</title>
+    <link>https://garden.inayakitori.com/</link>
+    <guid>https://garden.inayakitori.com/</guid>
+    <description><![CDATA[ This is a blank Quartz installation. See the documentation for how to get started. ]]></description>
+    <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
