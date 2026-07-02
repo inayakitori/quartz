@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: garden
+created: 2025-05-26T06:27:19+10:00

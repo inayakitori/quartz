@@ -1,0 +1,195 @@
+[
+  {
+    "fileName": "Video Game Book Club",
+    "relativePath": "Video Game Book Club.md",
+    "headings": [
+      {
+        "heading": "Games",
+        "level": 1
+      }
+    ],
+    "links": [
+      {
+        "link": "Ender lilies",
+        "relativePath": "Ender lilies.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "index",
+        "link": "Video Game Book Club",
+        "relativePath": "index.md"
+      }
+    ]
+  },
+  {
+    "fileName": "test1",
+    "relativePath": "test1.md"
+  },
+  {
+    "fileName": "index",
+    "relativePath": "index.md",
+    "tags": [
+      "capstone",
+      "fea",
+      "abaqus",
+      "solidworks"
+    ],
+    "headings": [
+      {
+        "heading": "Navigation",
+        "level": 1
+      },
+      {
+        "heading": "Missing Files",
+        "level": 1
+      }
+    ],
+    "links": [
+      {
+        "link": "Inaya",
+        "relativePath": "Inaya.md"
+      },
+      {
+        "link": "Video Game Book Club",
+        "relativePath": "Video Game Book Club.md"
+      }
+    ]
+  },
+  {
+    "fileName": "Inaya",
+    "relativePath": "Inaya.md",
+    "frontmatter": {
+      "cssclasses": [
+        "obsidian-icon",
+        "obsidian-banner"
+      ]
+    },
+    "headings": [
+      {
+        "heading": "Socials",
+        "level": 1
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "index",
+        "link": "Inaya",
+        "relativePath": "index.md"
+      }
+    ]
+  },
+  {
+    "fileName": "FEA Lap Joint",
+    "relativePath": "FEA Lap Joint.md",
+    "tags": [
+      "capstone",
+      "engineering",
+      "engineering/fea/abaqus"
+    ],
+    "frontmatter": {},
+    "headings": [
+      {
+        "heading": "Lap Joint Elasticity/Plasticity",
+        "level": 1
+      },
+      {
+        "heading": "Elastic Adhesive",
+        "level": 2
+      },
+      {
+        "heading": "Elastic-plastic",
+        "level": 2
+      },
+      {
+        "heading": "True stress-strain",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "Ender lilies",
+    "relativePath": "Ender lilies.md",
+    "frontmatter": {
+      "up": "[[Video Game Book Club]]",
+      "tags": null
+    },
+    "headings": [
+      {
+        "heading": "Pre-tutorial boss",
+        "level": 3
+      },
+      {
+        "heading": "Post-tutorial boss",
+        "level": 3
+      },
+      {
+        "heading": "Upper path",
+        "level": 3
+      },
+      {
+        "heading": "Jelly area",
+        "level": 3
+      },
+      {
+        "heading": "Catacombs",
+        "level": 3
+      }
+    ],
+    "links": [
+      {
+        "link": "Cool bench spots",
+        "relativePath": "Cool bench spots.md"
+      },
+      {
+        "link": "Ender lilies#Pre-tutorial boss",
+        "cleanLink": "Ender lilies",
+        "displayText": "Ender lilies > Pre-tutorial boss",
+        "relativePath": "Ender lilies.md"
+      },
+      {
+        "link": "EL Pathing",
+        "relativePath": "EL Pathing.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "Video Game Book Club",
+        "link": "Ender lilies",
+        "relativePath": "Video Game Book Club.md"
+      }
+    ]
+  },
+  {
+    "fileName": "EL Pathing",
+    "relativePath": "EL Pathing.md",
+    "frontmatter": {
+      "tags": null,
+      "up": "[[Ender lilies]]"
+    },
+    "backlinks": [
+      {
+        "fileName": "Ender lilies",
+        "link": "EL Pathing",
+        "relativePath": "Ender lilies.md"
+      }
+    ]
+  },
+  {
+    "fileName": "Cool bench spots",
+    "relativePath": "Cool bench spots.md",
+    "tags": [
+      "vgbk/ender_lilies"
+    ],
+    "frontmatter": {
+      "up": "[[Ender lilies]]"
+    },
+    "backlinks": [
+      {
+        "fileName": "Ender lilies",
+        "link": "Cool bench spots",
+        "relativePath": "Ender lilies.md"
+      }
+    ]
+  }
+]
